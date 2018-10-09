@@ -61,7 +61,7 @@ void CalcTFR(IMF_FILE_HEADER_3& LD, float A, float P, float lpm, std::vector<FPO
 		csES += S;
 	}
 	
-
+	if(1) //write enery graph to file as ASCII
 	{
 		CStdioFile file;
 		CString csName;
