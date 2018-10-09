@@ -16,11 +16,11 @@ void CalibrateMTF()
 	g_ld_tmp.fZ3 = g_pMotorA->get_mm_position();
 
 	//
-    int iWidthSaved  = g_IniFile.GetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_W,  2, 1);
-    int iHeightSaved = g_IniFile.GetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_H,  2, 1);
+    	int iWidthSaved  = g_IniFile.GetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_W,  2, 1);
+    	int iHeightSaved = g_IniFile.GetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_H,  2, 1);
 	int iHeightTFR = g_IniFile.GetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_TFR_H,  2, 1);
-    g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_W,  0);
-    g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_H,  iHeightTFR);
+    	g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_W,  0);
+    	g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_H,  iHeightTFR);
 
 
 	//calculate TFR graph at 3mm/50lpm
@@ -51,8 +51,8 @@ void CalibrateMTF()
 		g_IniFile.SetValueD(SEC_TFD_DLG,  KEY_FACTOR_27, f27CalibMTF);
 	}
 
-    g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_W,  iWidthSaved);
-    g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_H,  iHeightSaved);
+	g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_W,  iWidthSaved);
+    	g_IniFile.SetValueI(SEC_ENERGY_SCAN2, KEY_INTENSITY_H,  iHeightSaved);
 
 	g_LogInfo.EndBlock(dbg_handle);
 }
